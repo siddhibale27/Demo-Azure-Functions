@@ -17,7 +17,7 @@ namespace My.Function
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a new request.");
+            log.LogInformation("C# HTTP trigger function processed a newly request.");
 
             string name = req.Query["name"];
 
