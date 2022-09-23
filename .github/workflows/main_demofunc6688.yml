@@ -6,12 +6,14 @@ name: Build and deploy dotnet core app to Azure Function App - demofunc6688
 on:
   push:
     branches:
-      - main
+      - master
+    paths:
+      - 'demofunc6144/**'
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: 'v4.0' # set this to the dotnet version to use
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'demofunc6144' # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6.0.x' # set this to the dotnet version to use
 
 jobs:
   build-and-deploy:
